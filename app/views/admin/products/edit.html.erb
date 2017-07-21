@@ -27,6 +27,11 @@
     <%= f.input :image, as: :file %>
   </div>
 
+  <div class="group">
+    <%= f.input :friendly_id, :required => true %>
+    <p class="help-block">限小写英数字及横线，将作为网址的一部分</p>
+  </div>
+
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
 <% end %>
