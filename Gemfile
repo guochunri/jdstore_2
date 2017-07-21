@@ -40,6 +40,8 @@ gem 'aasm'
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 gem 'figaro'
+gem "rails-i18n"
+gem "devise-i18n"
 
 
 
@@ -62,4 +64,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg'
-end 
+end

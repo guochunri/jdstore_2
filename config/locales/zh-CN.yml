@@ -1,0 +1,4 @@
+"zh-CN" :
+  hello: "亲～ %{name} 你好："
+  admin:
+    product_list: 商品列表
