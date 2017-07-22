@@ -1,3 +1,5 @@
+<script src="https://cdn.bootcss.com/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
 <h2>订单列表 </h2>
 
 <table class="table table-bordered">
@@ -21,3 +23,21 @@
 
   </tbody>
 </table>
+
+<canvas id="myChart3" width="400" height="200"></canvas>
+<script>
+  var ctx3 = document.getElementById("myChart3");
+  var myChart3 = new Chart(ctx3, {
+    type: 'line',
+    data: <%= raw @data1.to_json %>,
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero:true
+          }
+        }]
+      }
+    }
+  });
+</script>
