@@ -44,6 +44,7 @@ gem "rails-i18n"
 gem "devise-i18n"
 gem 'letter_opener', group: :development
 gem 'premailer-rails'
+gem 'rails-erd'
 
 
 
