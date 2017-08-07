@@ -119,39 +119,44 @@
     </div>
   </section>
 
-  <!--===== 商品分类 =====-->
+  <!--===== 商品类型 =====-->
   <section class="categories-box">
     <div class="row">
       <div class="col-md-4 category-content">
-        <%= link_to '#' , class: "category_1" do %> <!-- 分类连结 -->
+        <%= link_to 'https://j-and-a-select.herokuapp.com/products?group=%E6%97%A5%E5%B8%B8%E6%96%87%E5%85%B7' , class: "category_1" do %>
           <div class="category-box">
-            <%= image_tag("category_1.jpg") %> <!-- 分类图片 -->
+            <%= image_tag("category_1.jpg") %>
           </div>
           <div>
-            <h3>器皿</h3> <!-- 分类标题 -->
-            <p>不鏽鋼材質便於清洗，不怕碰撞，緻密紋理相當迷人。鍋體兩側都有尖口，左右撇子都好用。可以煮兩到三人份的奶茶、一人份的湯麵、粥類，料理後亦可直接端上桌，可愛又方便！</p> <!-- 分类介绍 -->
+            <h3><%= t('手工艺品') %></h3>
+            <p><%= t('在追求个性化的今天，手工制作工艺以其独特的艺术魅力、装饰和实用的性能、
+                      手工随心所欲的乐趣，已经不可抗拒的在我们身边流行起来，她像风一样渗透到我们生活的方方面面。') %></p>
           </div>
         <% end %>
       </div>
       <div class="col-md-4 category-content">
-        <%= link_to '#' , class: "category_2" do %>
+        <%= link_to 'https://j-and-a-select.herokuapp.com/products?group=%E7%94%9F%E6%B4%BB%E5%99%A8%E7%89%A9' , class: "category_2" do %>
           <div class="category-box">
             <%= image_tag("category_2.jpg") %>
           </div>
           <div>
-            <h3>厨具</h3>
-            <p>工房Aizawa最受歡迎的牛奶鍋，由創立於大正11年、以製作金屬食器聞名的老舖Aizawa工房製作而成。在職人們的手中，金屬冷硬的質感，帶上了手工製作的細緻與溫度。</p>
+            <h3><%= t('手工蛋糕') %></h3>
+            <p><%= t('点心源自于埃及、希腊。远在5000多年前的古埃及，已出现当做供品的点心。
+                      常用原料包括面粉、牛奶、黄油、沙糖、奶油、巧克力、生果、果仁等，以焗炉高温烘制为主。
+                      此时已有人在巴旦杏仁中混合蜂蜜，称为多拉爵或普拉爵的起司蛋糕，吃甜点心也成为饮食习惯之一。') %></p>
           </div>
         <% end %>
       </div>
       <div class="col-md-4 category-content">
-        <%= link_to '#' , class: "category_3" do %>
+        <%= link_to 'https://j-and-a-select.herokuapp.com/products?group=%E5%80%8B%E4%BA%BA%E5%96%AE%E5%93%81' , class: "category_3" do %>
           <div class="category-box">
             <%= image_tag("category_3.jpg") %>
           </div>
           <div>
-            <h3>锅碗</h3>
-            <p>相較於琺瑯和陶瓷材質的牛奶鍋，不鏽鋼的質感多了一點硬派的感覺，鍋體上細緻的金屬紋理相當迷人。由白梣木手工製成的木柄，如同松鼠尾巴般圓潤好握、防燙，傾倒的角度也相當順手。</p>
+            <h3><%= t('积木') %></h3>
+            <p><%= t('积木是儿童喜爱的玩具。这种塑胶积木一头有凸粒，另一头
+                      有可嵌入凸粒的孔，形状有1300多种，每一种形状都有12种不同的颜色，以红、黄、蓝、白、绿色为主。
+                      它靠小朋友自己动脑动手，可以拼插出变化无穷的造型，令人爱不释手。') %></p>
           </div>
         <% end %>
       </div>
@@ -311,25 +316,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!--===== 合作品牌 =====-->
-  <section class="brand-box">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <h2>合作品牌</h2> <!-- 副标题 -->
-        <div class="short-line"></div> <!-- 分隔线 -->
-        <%= image_tag("brand_1.png") %> <!-- 品牌图片 -->
-        <%= image_tag("brand_2.png") %>
-        <%= image_tag("brand_3.png") %>
-        <%= image_tag("brand_4.png") %>
-        <%= image_tag("brand_5.png") %>
-        <%= image_tag("brand_6.png") %>
-        <%= image_tag("brand_7.png") %>
-        <%= image_tag("brand_8.png") %>
-        <%= image_tag("brand_9.png") %>
       </div>
     </div>
   </section>
