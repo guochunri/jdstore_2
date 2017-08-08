@@ -18,7 +18,7 @@
                 <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
                 <div class="carousel-caption">
                   <h3>品味生活</h3> <!-- 标题 -->
-                  <p>打造优质烹饪环境，让生活更有趣</p> <!-- 内文 -->
+                  <p>打造专属饰物，让生活更有趣</p> <!-- 内文 -->
                 </div>
               <% end %>
             </div>
@@ -35,8 +35,8 @@
               <%= link_to '#', target: "_blank" do %>
                 <%= image_tag("intro_3.jpg") %>
                 <div class="carousel-caption">
-                  <h3>精选厨具</h3>
-                  <p>优质进口厨具，做菜更加便利</p>
+                  <h3>精选积木</h3>
+                  <p>最多样的设计，搭建出自己的梦想</p>
                 </div>
               <% end %>
             </div>
@@ -69,14 +69,16 @@
           </div>
           <div class="col-md-7">
             <h3>Victor</h3> <!-- 创办人姓名 -->
-            <p>我們希望能為大家帶來種類多樣、價格低廉並且設計獨特，且讓大多數人可以負擔的起的家具家飾品，爲了實現這樣的想法，我們從產品設計、原料採購、生產製造，到在分店中的經營，都不斷在創新和尋求改善。 </p> <!-- 创办人介绍 -->
+            <p>我們希望能為大家帶來種類多樣、價格低廉並且設計獨特，且讓大多數人可以負擔的起的家具家飾品，
+              爲了實現這樣的想法，我們從產品設計、原料採購、生產製造，到在分店中的經營，都不斷在創新和尋求改善。 </p> <!-- 创办人介绍 -->
           </div>
         </div>
         <hr />
         <div class="row">
           <div class="col-md-7 col-md-offset-1">
             <h3>Kelly</h3> <!-- 创办人姓名 -->
-            <p>我們知道如果要提供顧客便宜、品質又好的商品，企業必須有效的管理成本及運用創新的製造方法，這是從未改變的信念，最有效的利用原料，尋找更經濟、更有效率及更有創意的製作或包裝方式，降低成本，回饋給大家! </p> <!-- 创办人介绍 -->
+            <p>我們知道如果要提供顧客便宜、品質又好的商品，企業必須有效的管理成本及運用創新的製造方法，
+              這是從未改變的信念，最有效的利用原料，尋找更經濟、更有效率及更有創意的製作或包裝方式，降低成本，回饋給大家! </p> <!-- 创办人介绍 -->
           </div>
           <div class="col-md-3">
             <%= image_tag("founder_2.png") %> <!-- 创办人头像 2 -->
@@ -134,153 +136,100 @@
   <section class="show-box">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <h2>推荐商品</h2> <!-- 副标题 -->
+        <h2>精选商品</h2> <!-- 副标题 -->
         <div class="short-line"></div> <!-- 分隔线 -->
         <div class="row">
-          <div class="col-md-3">
-            <%= link_to '#' do %> <!-- 商品连结 -->
-              <div class="box"><%= image_tag("item_1.jpg") %></div> <!-- 商品图片 -->
-              <div class="content">
-                <p>两手锅</p> <!-- 商品名称 -->
-                <p>$550</p> <!-- 商品价格 -->
+          <!-- <div id="pins" class="transitions-enabled"> -->
+            <div class="col-md-3">
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_1.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_2.jpg") %></div>
-              <div class="content">
-                <p>平底锅</p>
-                <p>$750</p>
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_2.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_3.jpg") %></div>
-              <div class="content">
-                <p>铁制茶壶</p>
-                <p>$450</p>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_3.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_4.jpg") %></div>
-              <div class="content">
-                <p>茶壶</p>
-                <p>$250</p>
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_4.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_5.jpg") %></div>
-              <div class="content">
-                <p>八角点心盘</p>
-                <p>$150</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_6.jpg") %></div>
-              <div class="content">
-                <p>点心盘</p>
-                <p>$80</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_7.jpg") %></div>
-              <div class="content">
-                <p>木盘</p>
-                <p>$125</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_8.jpg") %></div>
-              <div class="content">
-                <p>酱料碟</p>
-                <p>$20</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_9.jpg") %></div>
-              <div class="content">
-                <p>酱料碟</p>
-                <p>$50</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_10.jpg") %></div>
-              <div class="content">
-                <p>马克杯</p>
-                <p>$80</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_11.jpg") %></div>
-              <div class="content">
-                <p>陶锅</p>
-                <p>$650</p>
-              </div>
-            <% end %>
-          </div>
-          <div class="col-md-3">
-            <%= link_to '#' do %>
-              <div class="box"><%= image_tag("item_12.jpg") %></div>
-              <div class="content">
-                <p>8号锅</p>
-                <p>$500</p>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            </div>
 
-  <!--===== 用户反馈 =====-->
-  <section class="feedback-box">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h2>用户反馈</h2> <!-- 副标题 -->
-        <div class="short-line"></div> <!-- 分隔线 -->
-        <div id="feedback" class="carousel slide" data-ride="carousel">
-          <!--===== 轮播按钮 =====-->
-          <ol class="carousel-indicators">
-            <li data-target="#feedback" data-slide-to="0" class="active"></li>
-            <li data-target="#feedback" data-slide-to="1"></li>
-            <li data-target="#feedback" data-slide-to="2"></li>
-          </ol>
-
-          <!--===== 轮播内容 =====-->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <p>这是我用过最好的网站，商品众多、下单方便、送货快速，还能订制特殊规格的锅具，强力推荐。</p>
-              <%= image_tag("feedback_1.png") %> <!-- 图片 -->
-              <strong>Eddie - 上班族</strong> <!-- 介绍 -->
+            <div class="col-md-3">
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_5.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
+              </div>
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_6.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
+              </div>
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_7.jpg") %>
+                <!-- <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div> -->
+                <% end %>
+              </div>
             </div>
-            <div class="item">
-              <p>我是这网站的忠实用户，已经在这买好几年了，质量一直很好，而且不定时会有折扣，真的很划算！</p>
-              <%= image_tag("feedback_2.png") %>
-              <strong>Anna - 家庭主妇</strong>
-            </div>
-            <div class="item">
-              <p>身为一个学生，预算不太多，却也能在这找到便宜又有设计感的器皿，让我生活又添加一份乐趣。</p>
-              <%= image_tag("feedback_3.png") %>
-              <strong>Kobe - 大学生</strong>
-            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_8.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
+              </div>
+              <div class="box">
+                <%= link_to '#' do %>
+                  <%= image_tag("item_9.jpg") %>
+                <div class="content">
+                  <p>平底锅</p>
+                  <p>$750</p>
+                </div>
+                <% end %>
+              </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -325,4 +274,10 @@
   <section class="push-box">
     <%= link_to('立即购买', products_path, class:'btn btn-push' ) %>
   </section>
+
+  <!--===== Go top（回到顶端） =====-->
+  <div class="goTop">
+    <a href="#"><span class="fa fa-chevron-up"></span></a>
+  </div>
+
 </div>

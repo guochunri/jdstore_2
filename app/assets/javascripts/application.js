@@ -15,7 +15,7 @@
 //= require turbolinks
 
 //= require bootstrap
-
+//= require masonry/jquery.masonry
 //= require_tree .
 
 
@@ -27,3 +27,38 @@ $(window).scroll(function () {
 		$('#navbar').removeClass('scroll_navbar') //navbar 移除 scroll_navbar CSS
 	}
 })
+
+/*===== Go Top 回到顶端 =====*/
+function goTop(min_height) {
+  $(".goTop").click(
+    function() {
+      $('html,body').animate({
+          scrollTop: 0
+      }, 700);
+    });
+  min_height=min_height?min_height:2000; //按钮出现高度（画面下移）
+  $(window).scroll(function() {
+    var s = $(window).scrollTop();
+    if (s > min_height) {
+        $(".goTop").fadeIn(100); //按钮出现时间（画面下移）
+    } else {
+        $(".goTop").fadeOut(200); //按钮消失时间（画面上移）
+    }
+  });
+}
+
+$(function() {
+  goTop();
+});
+
+
+/*===== 图片随机排列 =====*/
+// $(function(){
+//   var $pins = $('#pins');
+//   $pins.imagesLoaded(function(){
+//     $pins.masonry({
+//       itemSelector : '.box',
+//       isFitWidth: true,
+//     });
+//   });
+// });
