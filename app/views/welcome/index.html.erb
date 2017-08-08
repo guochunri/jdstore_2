@@ -13,33 +13,23 @@
 
           <!--===== 轮播内容 =====-->
           <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
-                <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
-                <div class="carousel-caption">
-                  <h3>品味生活</h3> <!-- 标题 -->
-                  <p>打造专属饰物，让生活更有趣</p> <!-- 内文 -->
-                </div>
+            <% i = 1 %>
+            <% @intros.each do |intro| %>
+              <% if i == 1 %>
+              <div class="item active">
+              <% else %>
+              <div class="item">
               <% end %>
-            </div>
-            <div class="item">
-              <%= link_to '#', target: "_blank" do %>
-                <%= image_tag("intro_2.jpg") %>
-                <div class="carousel-caption">
-                  <h3>创造美食</h3>
-                  <p>最新创意食谱，每天都充满变化</p>
-                </div>
-              <% end %>
-            </div>
-            <div class="item">
-              <%= link_to '#', target: "_blank" do %>
-                <%= image_tag("intro_3.jpg") %>
-                <div class="carousel-caption">
-                  <h3>精选积木</h3>
-                  <p>最多样的设计，搭建出自己的梦想</p>
-                </div>
-              <% end %>
-            </div>
+                <%= link_to intro.link, target: "_blank" do %>
+                  <%= image_tag(intro.image) %>
+                  <div class="carousel-caption">
+                    <h3><%= intro.title %></h3>
+                    <p><%= intro.content %></p>
+                  </div>
+                <% end %>
+              </div>
+              <% i += 1 %>
+            <% end %>
           </div>
 
           <!--===== 换页按钮 =====-->
@@ -60,28 +50,26 @@
   <section class="story-box">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <h2>品牌故事</h2> <!-- 区块标题 -->
-        <h1>JDStore</h1> <!-- 品牌名称 -->
-        <div class="short-line"></div> <!-- 分隔线 -->
+        <h2><%= t('th-j-and-a-select') %></h2>
+        <h1><%= t('th-j-and-a') %></h1>
+        <div class="short-line"></div>
         <div class="row">
           <div class="col-md-3 col-md-offset-1">
-            <%= image_tag("founder_1.png") %> <!-- 创办人头像 1 -->
+            <%= image_tag("founder_1.png") %>
           </div>
           <div class="col-md-7">
-            <h3>Victor</h3> <!-- 创办人姓名 -->
-            <p>我們希望能為大家帶來種類多樣、價格低廉並且設計獨特，且讓大多數人可以負擔的起的家具家飾品，
-              爲了實現這樣的想法，我們從產品設計、原料採購、生產製造，到在分店中的經營，都不斷在創新和尋求改善。 </p> <!-- 创办人介绍 -->
+            <h3><%= t('th-summer') %></h3>
+            <p><%= t('about-summer') %></p>
           </div>
         </div>
         <hr />
         <div class="row">
           <div class="col-md-7 col-md-offset-1">
-            <h3>Kelly</h3> <!-- 创办人姓名 -->
-            <p>我們知道如果要提供顧客便宜、品質又好的商品，企業必須有效的管理成本及運用創新的製造方法，
-              這是從未改變的信念，最有效的利用原料，尋找更經濟、更有效率及更有創意的製作或包裝方式，降低成本，回饋給大家! </p> <!-- 创办人介绍 -->
+            <h3><%= t('th-anndo') %></h3>
+            <p><%= t('about-anndo') %></p>
           </div>
           <div class="col-md-3">
-            <%= image_tag("founder_2.png") %> <!-- 创办人头像 2 -->
+            <%= image_tag("founder_2.png") %>
           </div>
         </div>
       </div>
@@ -97,9 +85,8 @@
             <%= image_tag("category_1.jpg") %>
           </div>
           <div>
-            <h3><%= t('手工艺品') %></h3>
-            <p><%= t('在追求个性化的今天，手工制作工艺以其独特的艺术魅力、装饰和实用的性能、
-                      手工随心所欲的乐趣，已经不可抗拒的在我们身边流行起来，她像风一样渗透到我们生活的方方面面。') %></p>
+            <h3><%= t('th-art') %></h3>
+            <p><%= t('slogan-art') %></p>
           </div>
         <% end %>
       </div>
@@ -109,10 +96,8 @@
             <%= image_tag("category_2.jpg") %>
           </div>
           <div>
-            <h3><%= t('手工蛋糕') %></h3>
-            <p><%= t('点心源自于埃及、希腊。远在5000多年前的古埃及，已出现当做供品的点心。
-                      常用原料包括面粉、牛奶、黄油、沙糖、奶油、巧克力、生果、果仁等，以焗炉高温烘制为主。
-                      此时已有人在巴旦杏仁中混合蜂蜜，称为多拉爵或普拉爵的起司蛋糕，吃甜点心也成为饮食习惯之一。') %></p>
+            <h3><%= t('th-cake') %></h3>
+            <p><%= t('slogan-cake') %></p>
           </div>
         <% end %>
       </div>
@@ -122,10 +107,8 @@
             <%= image_tag("category_3.jpg") %>
           </div>
           <div>
-            <h3><%= t('积木') %></h3>
-            <p><%= t('积木是儿童喜爱的玩具。这种塑胶积木一头有凸粒，另一头
-                      有可嵌入凸粒的孔，形状有1300多种，每一种形状都有12种不同的颜色，以红、黄、蓝、白、绿色为主。
-                      它靠小朋友自己动脑动手，可以拼插出变化无穷的造型，令人爱不释手。') %></p>
+            <h3><%= t('th-lego') %></h3>
+            <p><%= t('slogan-lego') %></p>
           </div>
         <% end %>
       </div>
@@ -136,7 +119,7 @@
   <section class="show-box">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <h2>精选商品</h2> <!-- 副标题 -->
+        <h2><%= t('th-featured-products') %></h2> <!-- 副标题 -->
         <div class="short-line"></div> <!-- 分隔线 -->
         <div class="row">
           <!-- <div id="pins" class="transitions-enabled"> -->
@@ -272,7 +255,7 @@
 
   <!--===== 立即购买 =====-->
   <section class="push-box">
-    <%= link_to('立即购买', products_path, class:'btn btn-push' ) %>
+    <%= link_to(t('btn-buy-now'), products_path, class:'btn btn-push' ) %>
   </section>
 
   <!--===== Go top（回到顶端） =====-->

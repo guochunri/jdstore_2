@@ -41,6 +41,8 @@ gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 gem 'figaro'
 gem 'masonry-rails'
+gem 'i18n'
+gem 'rails-i18n'
 
 
 

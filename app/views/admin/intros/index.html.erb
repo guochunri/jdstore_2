@@ -1,0 +1,29 @@
+<h2><%= t('intro-index') %></h2>
+
+<div class='pull-right'>
+  <%= link_to(t('btn-intro-new'), new_admin_intro_path, :class => 'btn btn-sm btn-default')%>
+</div>
+
+<table class='table'>
+
+  <thead>
+    <tr>
+      <th><%= t('f-intro-title') %></th>
+      <th><%= t('f-intro-content') %></th>
+      <th><%= t('f-intro-link') %></th>
+      <th><%= t('f-options') %></th>
+    </tr>
+  </thead>
+
+  <% @intros.each do |intro| %>
+    <tr>
+      <td><%= intro.title %></td>
+      <td><%= intro.content %></td>
+      <td><%= intro.link %></td>
+      <td>
+        <%= link_to(t('btn-edit'), edit_admin_intro_path(intro), :class => 'btn btn-sm btn-default') %>
+        <%= link_to(t('btn-delete'), admin_intro_path(intro), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-sm btn-default') %>
+      </td>
+    </tr>
+  <% end %>
+</table>

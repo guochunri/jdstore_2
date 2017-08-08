@@ -1,0 +1,26 @@
+<%= simple_form_for [:admin, @intro] do |f| %>
+
+  <div class='group'>
+    <%= f.input :title, :label => t('f-intro-title') %>
+  </div>
+
+  <div class='group'>
+    <%= f.input :content, :label => t('f-intro-content') %>
+  </div>
+
+  <div class='group'>
+    <%= f.input :link, :label => t('f-intro-link') %>
+  </div>
+
+  <div class='group'>
+    <%= f.label t('f-intro-image') %><br>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class='group'>
+    <%= f.input :is_hidden, :label => t('f-hide') %>
+  </div>
+
+  <%= f.submit t('f-submit'), class: 'btn btn-lg btn-default' %>
+
+<% end %>

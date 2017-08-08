@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'welcome#index'
+
   devise_for :users
 
   namespace :admin do
@@ -11,6 +14,14 @@ Rails.application.routes.draw do
         post :return
       end
     end
+    
+    resources :intros do
+      member do
+        post :publish
+        post :hide
+      end
+    end
+
   end
 
   resources :products do
@@ -39,7 +50,5 @@ Rails.application.routes.draw do
   namespace :account do
     resources :orders
   end
-
-  root 'welcome#index'
 
 end
