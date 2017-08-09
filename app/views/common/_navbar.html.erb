@@ -20,13 +20,13 @@
           <ul class="nav navbar-nav navbar-left">
             <li><%= link_to('商品列表', '#') %></li>
             <li><%= link_to('特价商品', '#') %></li>
-            <li><%= link_to('品牌故事', '#') %></li>
+            <li><%= link_to(t('recommend-access'), '#') %></li>
           </ul>
           <!--=== 帐号操作 ===-->
           <ul class="nav navbar-nav navbar-right">
             <li>
               <%= link_to carts_path do  %>
-                  购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+                  <%= t('cart') %> <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
               <% end %>
             </li>
             <!-- <li class="dropdown">
