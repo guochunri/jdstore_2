@@ -24,6 +24,13 @@
           </ul>
           <!--=== 帐号操作 ===-->
           <ul class="nav navbar-nav navbar-right">
+            <!-- 愿望清单 -->
+            <li>
+              <%= link_to account_products_path do %>
+                <%= t('wish-list') %> <i class='fa fa-bookmark-o'></i>
+              <% end %>
+            </li>
+
             <li>
               <%= link_to carts_path do  %>
                   <%= t('cart') %> <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
         post :return
       end
     end
-    
+
     resources :intros do
       member do
         post :publish
@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   resources :products do
     member do
       post :add_to_cart
+      post :add_to_wish_list
+      post :remove_from_wish_list
     end
   end
 
@@ -49,6 +51,12 @@ Rails.application.routes.draw do
 
   namespace :account do
     resources :orders
+    resources :products do
+      member do
+        post :add_to_cart
+        post :remove_from_wish_list
+      end
+    end
   end
 
 end
