@@ -8,6 +8,7 @@
 
   <thead>
     <tr>
+      <th></th>
       <th><%= t('f-intro-title') %></th>
       <th><%= t('f-intro-content') %></th>
       <th><%= t('f-intro-link') %></th>
@@ -17,12 +18,14 @@
 
   <% @intros.each do |intro| %>
     <tr>
+      <td><%= render_intro_status(intro) %></td>
       <td><%= intro.title %></td>
       <td><%= intro.content %></td>
       <td><%= intro.link %></td>
       <td>
         <%= link_to(t('btn-edit'), edit_admin_intro_path(intro), :class => 'btn btn-sm btn-default') %>
         <%= link_to(t('btn-delete'), admin_intro_path(intro), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-sm btn-default') %>
+        <%= render_intro_publish_or_hide(intro) %>
       </td>
     </tr>
   <% end %>
